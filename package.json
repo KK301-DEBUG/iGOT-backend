@@ -1,0 +1,33 @@
+{
+  "name": "igot-backend",
+  "version": "0.1.0",
+  "description": "Backend server for iGOT MVP - competency gap engine + quiz generation + iGOT stub",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/cors": "^10.0.1",
+    "@fastify/env": "^5.0.1",
+    "@fastify/jwt": "^9.0.1",
+    "@fastify/multipart": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.1.0",
+    "mongoose": "^8.8.0",
+    "openai": "^4.68.0",
+    "pdf-parse": "^1.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/pdf-parse": "^1.1.4",
+    "pino-pretty": "^11.3.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
