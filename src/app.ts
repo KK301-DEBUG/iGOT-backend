@@ -1,3 +1,5 @@
+import multipart from "@fastify/multipart";
+import { materialRoutes } from "./modules/material/material.routes";
 import Fastify, { FastifyInstance } from "fastify";
 import cors from "@fastify/cors";
 
@@ -10,11 +12,15 @@ export function buildApp(): FastifyInstance {
     },
   });
 
-  app.register(cors, { origin: "*" }); // tighten this before production
+  app.register(cors, { origin: "*" });
+  app.register(multipart, {
+  limits: { fileSize: 10 * 1024 * 1024 },
+});
 
-  app.get("/health", async () => {
-    return { status: "ok" };
-  });
+ app.get("/health", async () => {
+  return { status: "ok", version: "v2-test" };
+});
+  app.register(materialRoutes, { prefix: "/api/material" });
 
   // Module routes will be registered here as they're built, e.g.:
   // app.register(materialRoutes, { prefix: "/api/material" });
