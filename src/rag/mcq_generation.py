@@ -1,7 +1,7 @@
 from google import genai
 from mcq_schema import MCQ
 
-client = genai.Client
+client = genai.Client()                                     # reads GEMINI_API_KEY from env
 
 MAX_ATTEMPTS_PER_SLOT = 3
 
@@ -47,7 +47,7 @@ def generate_valid_mcq(candidates: list[int],
 
     tried = 0
     attempts = []
-    for chunk_idx in candidates[:max_attempts]:
+    for chunk_idx in candidates:
         if chunk_idx in used_chunks:
             continue
         if tried >= max_attempts:
@@ -61,7 +61,7 @@ def generate_valid_mcq(candidates: list[int],
             attempts.append({"chunk_idx": chunk_idx, "reason": f"generation error: {e}", "mcq": None})
             continue
 
-        reason = validate_mcq(mcq)
+        reason = validate_mcq(mcq, competency_list)
         if reason is None:
             used_chunks.add(chunk_idx)
             return mcq, chunk_idx, attempts
