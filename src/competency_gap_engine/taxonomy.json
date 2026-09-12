@@ -1,0 +1,121 @@
+{
+  "proficiency_levels": [
+    {
+      "level": 1,
+      "name": "Awareness",
+      "description": "Knows the concept exists; no practical exposure."
+    },
+    {
+      "level": 2,
+      "name": "Basic",
+      "description": "Can perform the task under supervision."
+    },
+    {
+      "level": 3,
+      "name": "Independent",
+      "description": "Can perform the task unsupervised."
+    },
+    {
+      "level": 4,
+      "name": "Expert",
+      "description": "Handles complex or edge cases; mentors others."
+    },
+    {
+      "level": 5,
+      "name": "Strategic",
+      "description": "Shapes policy or methodology at an institutional level."
+    }
+  ],
+  "competencies": [
+    {
+      "id": "BEH_COMM",
+      "name": "Communication & Stakeholder Management",
+      "category": "behavioural"
+    },
+    {
+      "id": "BEH_PROB",
+      "name": "Problem Solving & Decision Making",
+      "category": "behavioural"
+    },
+    {
+      "id": "BEH_ETHI",
+      "name": "Ethical Governance & Integrity",
+      "category": "behavioural"
+    },
+    {
+      "id": "BEH_LEAD",
+      "name": "Team Leadership / People Management",
+      "category": "behavioural"
+    },
+    {
+      "id": "BEH_RSLT",
+      "name": "Result Orientation",
+      "category": "behavioural"
+    },
+    {
+      "id": "BEH_CHNG",
+      "name": "Adaptability & Change Management",
+      "category": "behavioural"
+    },
+    {
+      "id": "FUN_POLY",
+      "name": "Policy Analysis & Drafting",
+      "category": "functional"
+    },
+    {
+      "id": "FUN_FIN",
+      "name": "Financial Management / Budgeting",
+      "category": "functional"
+    },
+    {
+      "id": "FUN_PROJ",
+      "name": "Project & Programme Management",
+      "category": "functional"
+    },
+    {
+      "id": "FUN_EGOV",
+      "name": "e-Governance & Digital Tools",
+      "category": "functional"
+    },
+    {
+      "id": "FUN_GRIEV",
+      "name": "Grievance Redressal / RTI Handling",
+      "category": "functional"
+    },
+    {
+      "id": "FUN_ADMIN",
+      "name": "Office Procedures & Administration",
+      "category": "functional"
+    },
+    {
+      "id": "DOM_SURV",
+      "name": "Survey Design & Sampling Methodology",
+      "category": "domain"
+    },
+    {
+      "id": "DOM_VALID",
+      "name": "Data Validation & Quality Assurance",
+      "category": "domain"
+    },
+    {
+      "id": "DOM_NACC",
+      "name": "National Accounts Statistics",
+      "category": "domain"
+    },
+    {
+      "id": "DOM_INDEX",
+      "name": "Index Number Construction (CPI/WPI/IIP)",
+      "category": "domain"
+    },
+    {
+      "id": "DOM_SOFT",
+      "name": "Statistical Software (R/Python/SPSS)",
+      "category": "domain"
+    },
+    {
+      "id": "DOM_DPDPA",
+      "name": "Data Protection Law (DPDPA 2023)",
+      "category": "domain"
+    }
+  ]
+}
