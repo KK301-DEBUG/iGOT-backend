@@ -16,12 +16,13 @@ def ingest_document(path: str, doc_id: str) -> dict:
     text = extract_text(path)
     chunks = chunking(text)
     model = get_model()
-    chunk_embeddings = model.encode(chunks).astype("float32")
+    chunk_embeddings = model.encode(chunks).astype("float32")       # embedding chunks
     faiss.normalize_L2(chunk_embeddings)                            # cosine similarity via inner product
 
-    index = faiss.IndexFlatIP(chunk_embeddings.shape[1])
+    index = faiss.IndexFlatIP(chunk_embeddings.shape[1])            # indexing
     index.add(chunk_embeddings)
 
+    # storing indexes and chunk texts
     save_idx(index, doc_id)
     save_chunks(chunks, doc_id)
 
